@@ -7,13 +7,13 @@ $(function() {
 	});
 
 	// Watch check buttons.
-	$("button:contains('check')").click(function(e) {
+	$('ul').on('click', "button:contains('check')", function(e) {
 		e.preventDefault();
 		$(this).closest('div').siblings('.shopping-item').toggleClass('shopping-item__checked');
 	});
 
-	// Watch delete buttons
-	$("button:contains('delete')").click(function(e) {
+	// Watch delete buttons.
+	$('ul').on('click', "button:contains('delete')", function(e) {
 		$(this).closest('li').remove();
 	});
 });
